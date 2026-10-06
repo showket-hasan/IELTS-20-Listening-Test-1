@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS 20 Academic - Listening Practice Test 1</title>
+  <style>
+    :root {
+      --primary: #002b49;
+      --primary-light: #004578;
+      --secondary: #8b0000;
+      --accent: #b8860b;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #555555;
+      --border: #dcdcdc;
+      --correct: #1b5e20;
+      --correct-bg: #e8f5e9;
+      --incorrect: #b71c1c;
+      --incorrect-bg: #ffebee;
+      --highlight: #fff9c4;
+      --header-navy: #001f3f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Times New Roman", Times, Georgia, serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 17px;
+      padding-bottom: 90px;
+    }
+
+    /* Academic Header */
+    .exam-header {
+      background: linear-gradient(135deg, #001f3f 0%, #003366 60%, #002b49 100%);
+      color: #ffffff;
+      padding: 24px 32px 18px;
+      border-bottom: 4px solid var(--accent);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .header-title-box h1 {
+      font-size: 28px;
+      letter-spacing: 0.5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .header-title-box p {
+      font-size: 15px;
+      font-style: italic;
+      color: #e0e8f0;
+      letter-spacing: 0.3px;
+    }
+
+    .header-kpi-bar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(255,255,255,0.08);
+      padding: 10px 18px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .kpi-item {
+      text-align: center;
+    }
+
+    .kpi-item .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #cce0ff;
+      display: block;
+    }
+
+    .kpi-item .val {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .timer-display {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #ffeb3b;
+      min-width: 90px;
+    }
+
+    .btn-timer-toggle {
+      background: transparent;
+      border: 1px solid #ffeb3b;
+      color: #ffeb3b;
+      padding: 3px 8px;
+      font-family: inherit;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-top: 4px;
+    }
+    .btn-timer-toggle:hover {
+      background: #ffeb3b;
+      color: #001f3f;
+    }
+
+    /* Sticky Navigation & Progress Bar */
+    .nav-bar-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      border-bottom: 2px solid #002b49;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .nav-bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-tabs {
+      display: flex;
+      gap: 6px;
+    }
+
+    .tab-btn {
+      background: #f0f4f8;
+      border: 1px solid #c5d3e0;
+      color: #002b49;
+      font-family: "Times New Roman", serif;
+      font-size: 15px;
+      font-weight: bold;
+      padding: 7px 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover, .tab-btn.active {
+      background: #002b49;
+      color: #ffffff;
+      border-color: #002b49;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-grid-toggle {
+      background: #eef2f7;
+      border: 1px solid #9bb2c9;
+      color: #002b49;
+      padding: 7px 12px;
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-grid-toggle:hover {
+      background: #dfe7f0;
+    }
+
+    .btn-submit-main {
+      background: #8b0000;
+      color: #ffffff;
+      border: none;
+      padding: 8px 18px;
+      font-family: "Times New Roman", serif;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(139, 0, 0, 0.3);
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-submit-main:hover {
+      background: #a30000;
+      transform: translateY(-1px);
+    }
+
+    .btn-submit-main:active {
+      transform: translateY(0);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+
+    /* Audio Banner */
+    .audio-player-card {
+      background: #ffffff;
+      border: 1px solid #cfdbe6;
+      border-left: 5px solid #004578;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .audio-info h3 {
+      font-size: 18px;
+      color: #002b49;
+      margin-bottom: 4px;
+    }
+
+    .audio-info p {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .audio-controls-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    audio {
+      height: 38px;
+      border-radius: 4px;
+    }
+
+    .speed-select {
+      font-family: inherit;
+      padding: 6px 10px;
+      border: 1px solid #b0c4de;
+      border-radius: 4px;
+      background: #fff;
+      font-size: 14px;
+    }
+
+    /* Section Card */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    }
+
+    .part-banner {
+      border-bottom: 2px solid #002b49;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .part-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #002b49;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .part-subtitle {
+      font-size: 16px;
+      color: #666;
+      font-style: italic;
+    }
+
+    .instruction-box {
+      background: #fbfbfd;
+      border: 1px solid #d8e2ed;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      border-radius: 4px;
+    }
+
+    .instruction-box h4 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .instruction-box p {
+      font-size: 15px;
+      color: #222;
+    }
+
+    .word-limit-tag {
+      display: inline-block;
+      background: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    /* Tables */
+    .exam-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 30px;
+      background: #fff;
+      border: 1px solid #111;
+    }
+
+    .exam-table th {
+      background: #f0f4f8;
+      color: #002b49;
+      border: 1px solid #333;
+      padding: 12px 14px;
+      font-weight: bold;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .exam-table td {
+      border: 1px solid #333;
+      padding: 12px 14px;
+      vertical-align: top;
+      font-size: 16px;
+    }
+
+    .exam-table tr:nth-child(even) td {
+      background: #fdfdfd;
+    }
+
+    /* Blank Inputs */
+    .q-blank-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin: 3px 2px;
+      vertical-align: middle;
+    }
+
+    .q-num-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #002b49;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: bold;
+      min-width: 26px;
+      height: 24px;
+      padding: 0 5px;
+      border-radius: 3px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .q-input {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      padding: 5px 10px;
+      border: 1.5px solid #778899;
+      border-radius: 3px;
+      background: #ffffff;
+      color: #000;
+      min-width: 140px;
+      max-width: 210px;
+      transition: all 0.2s;
+    }
+
+    .q-input:focus {
+      outline: none;
+      border-color: #002b49;
+      box-shadow: 0 0 5px rgba(0, 43, 73, 0.35);
+      background: #fffff8;
+    }
+
+    .q-input.answered {
+      border-color: #2e7d32;
+      background-color: #f6fff6;
+    }
+
+    /* Multiple Choice Questions */
+    .mcq-block {
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      background: #ffffff;
+      transition: border-color 0.2s;
+    }
+
+    .mcq-block:hover {
+      border-color: #9bb2c9;
+    }
+
+    .mcq-stem {
+      font-size: 17px;
+      font-weight: bold;
+      color: #002b49;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .options-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-left: 36px;
+    }
+
+    .option-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+
+    .option-label:hover {
+      background: #f0f4f9;
+      border-color: #cbd5e1;
+    }
+
+    .option-label input[type="radio"],
+    .option-label input[type="checkbox"] {
+      margin-top: 4px;
+      cursor: pointer;
+      width: 17px;
+      height: 17px;
+      accent-color: #002b49;
+    }
+
+    .option-letter {
+      font-weight: bold;
+      color: #002b49;
+      min-width: 18px;
+    }
+
+    /* Lecture Notes Styling (Part 4) */
+    .lecture-notes-sheet {
+      background: #fff;
+      border: 1px solid #111;
+      padding: 24px 28px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+
+    .lecture-title {
+      text-align: center;
+      font-size: 21px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: #002b49;
+      border-bottom: 1px solid #002b49;
+      padding-bottom: 8px;
+    }
+
+    .lecture-subheading {
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+      margin: 18px 0 10px;
+    }
+
+    .lecture-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .lecture-list > li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 16.5px;
+    }
+
+    .lecture-list > li::before {
+      content: "•";
+      position: absolute;
+      left: 6px;
+      font-size: 22px;
+      line-height: 1;
+      color: #002b49;
+    }
+
+    .lecture-sublist {
+      list-style-type: none;
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    .lecture-sublist > li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .lecture-sublist > li::before {
+      content: "–";
+      position: absolute;
+      left: 4px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* Question Grid Drawer Modal */
+    .grid-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-modal {
+      background: #ffffff;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 650px;
+      padding: 24px 28px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .grid-modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #002b49;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+    }
+
+    .grid-modal-header h3 {
+      font-size: 20px;
+      color: #002b49;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .q-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .q-grid-btn {
+      aspect-ratio: 1;
+      background: #f0f4f8;
+      border: 1px solid #bcccdb;
+      border-radius: 4px;
+      font-family: "Times New Roman", serif;
+      font-size: 15px;
+      font-weight: bold;
+      color: #002b49;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .q-grid-btn:hover {
+      background: #002b49;
+      color: #fff;
+    }
+
+    .q-grid-btn.answered {
+      background: #e8f5e9;
+      border-color: #2e7d32;
+      color: #1b5e20;
+    }
+
+    .q-grid-btn.flagged {
+      border: 2px solid #e65100;
+      background: #fff3e0;
+      color: #b73e00;
+    }
+
+    .grid-legend {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: #555;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .legend-box {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      border: 1px solid #888;
+    }
+
+    /* Result / Grading Modal */
+    .result-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .result-card {
+      background: #ffffff;
+      border-radius: 8px;
+      max-width: 950px;
+      width: 100%;
+      padding: 36px 40px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+      margin: auto;
+      border-top: 6px solid #002b49;
+    }
+
+    .result-header {
+      text-align: center;
+      margin-bottom: 24px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 20px;
+    }
+
+    .result-header h2 {
+      font-size: 28px;
+      color: #002b49;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .score-banner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #f8fafc;
+      border: 2px solid #002b49;
+      border-radius: 6px;
+      padding: 20px;
+      margin: 20px 0 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .score-circle {
+      text-align: center;
+    }
+
+    .score-circle .score-num {
+      font-size: 46px;
+      font-weight: bold;
+      color: #002b49;
+      line-height: 1.1;
+    }
+
+    .score-circle .score-desc {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #64748b;
+    }
+
+    .band-badge {
+      background: #8b0000;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .band-badge .band-val {
+      font-size: 38px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .band-badge .band-lbl {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #ffcccc;
+    }
+
+    .section-bars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .section-bar-item {
+      background: #f1f5f9;
+      padding: 14px;
+      border-radius: 6px;
+      border-left: 4px solid #002b49;
+    }
+
+    .section-bar-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #334155;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .progress-track {
+      height: 8px;
+      background: #cbd5e1;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: #002b49;
+      transition: width 0.5s ease;
+    }
+
+    .action-button-group {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 24px 0 16px;
+    }
+
+    .btn-download-word {
+      background: #185a9d;
+      color: #ffffff;
+      border: none;
+      padding: 12px 26px;
+      font-family: "Times New Roman", serif;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 3px 8px rgba(24, 90, 157, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .btn-download-word:hover {
+      background: #13467b;
+      transform: translateY(-1px);
+    }
+
+    .btn-review-paper {
+      background: #002b49;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn-review-paper:hover {
+      background: #003a66;
+    }
+
+    .btn-close-modal {
+      background: #64748b;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-family: inherit;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn-close-modal:hover {
+      background: #475569;
+    }
+
+    /* Diagnostics Section in Results Modal */
+    .diagnostic-tabs {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    .diag-tab-btn {
+      background: none;
+      border: none;
+      padding: 8px 16px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: bold;
+      color: #64748b;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+    }
+
+    .diag-tab-btn.active {
+      color: #002b49;
+      border-bottom-color: #002b49;
+    }
+
+    .diag-pane {
+      display: none;
+    }
+
+    .diag-pane.active {
+      display: block;
+    }
+
+    .feedback-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+
+    .feedback-box h4 {
+      font-size: 17px;
+      color: #002b49;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feedback-box ul {
+      margin-left: 24px;
+      font-size: 15.5px;
+      color: #334155;
+    }
+
+    .feedback-box li {
+      margin-bottom: 6px;
+    }
+
+    /* Item Analysis Table */
+    .item-table-wrap {
+      max-height: 380px;
+      overflow-y: auto;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      margin-top: 14px;
+    }
+
+    .item-analysis-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .item-analysis-table th {
+      position: sticky;
+      top: 0;
+      background: #002b49;
+      color: #fff;
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .item-analysis-table td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    .status-correct {
+      color: #1b5e20;
+      font-weight: bold;
+    }
+
+    .status-incorrect {
+      color: #b71c1c;
+      font-weight: bold;
+    }
+
+    /* In-Paper Review Highlight States */
+    .paper-review-mode .q-input.user-correct {
+      background: #e8f5e9 !important;
+      border-color: #2e7d32 !important;
+      color: #1b5e20 !important;
+      font-weight: bold;
+    }
+
+    .paper-review-mode .q-input.user-incorrect {
+      background: #ffebee !important;
+      border-color: #c62828 !important;
+      color: #b71c1c !important;
+      text-decoration: line-through;
+    }
+
+    .answer-key-hint {
+      display: none;
+      font-size: 13px;
+      font-weight: bold;
+      color: #1b5e20;
+      background: #e8f5e9;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+    }
+
+    .paper-review-mode .answer-key-hint {
+      display: inline-block;
+    }
+
+    /* Print styles */
+    @media print {
+      .nav-bar-wrapper, .exam-header, .audio-player-card, .btn-grid-toggle, .btn-submit-main {
+        display: none !important;
+      }
+      body {
+        background: #fff;
+        padding-bottom: 0;
+      }
+      .section-card {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin-bottom: 40px;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Academic Header -->
+  <header class="exam-header">
+    <div class="header-content">
+      <div class="header-title-box">
+        <h1>Cambridge IELTS 20 Academic</h1>
+        <p>Listening Practice Test 1 &bull; Diagnostic Assessment &amp; Automated Evaluation System</p>
+      </div>
+      <div class="header-kpi-bar">
+        <div class="kpi-item">
+          <span class="label">Time Remaining</span>
+          <div class="timer-display" id="timerDisplay">30:00</div>
+          <button class="btn-timer-toggle" id="timerToggleBtn" onclick="toggleTimer()">Pause</button>
+        </div>
+        <div class="kpi-item" style="border-left: 1px solid rgba(255,255,255,0.2); padding-left: 16px;">
+          <span class="label">Progress</span>
+          <div class="val" id="progressCount">0 / 40</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Subnavigation & Action Bar -->
+  <div class="nav-bar-wrapper">
+    <div class="nav-bar">
+      <div class="section-tabs">
+        <button class="tab-btn active" onclick="scrollToSection('part1')">Part 1 (Q1-10)</button>
+        <button class="tab-btn" onclick="scrollToSection('part2')">Part 2 (Q11-20)</button>
+        <button class="tab-btn" onclick="scrollToSection('part3')">Part 3 (Q21-30)</button>
+        <button class="tab-btn" onclick="scrollToSection('part4')">Part 4 (Q31-40)</button>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-grid-toggle" onclick="openGridModal()">
+          <span>&#x2630;</span> Question Navigator
+        </button>
+        <button class="btn-submit-main" onclick="submitExam()">
+          &#x2714; Submit &amp; Generate Report
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" id="examContainer">
+
+    <!-- ========================================== -->
+    <!-- PART 1 -->
+    <!-- ========================================== -->
+    <section class="section-card" id="part1">
+      <div class="part-banner">
+        <div>
+          <h2 class="part-title">Test 1 &ndash; Listening &ndash; Part 1</h2>
+          <p class="part-subtitle">Restaurant Recommendations &bull; Questions 1&ndash;10</p>
+        </div>
+      </div>
+
+      <!-- Part 1 Audio Player -->
+      <div class="audio-player-card">
+        <div class="audio-info">
+          <h3>Part 1 Audio Track</h3>
+          <p>Official recording: Cambridge IELTS 20 Test 1 Part 1 (T1S1.mp3)</p>
+        </div>
+        <div class="audio-controls-wrap">
+          <audio id="audioPart1" controls preload="metadata">
+            <source src="IELTS 20 TEST 1/T1S1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <select class="speed-select" onchange="setAudioSpeed('audioPart1', this.value)">
+            <option value="1">1.0&times; Normal</option>
+            <option value="0.8">0.8&times;</option>
+            <option value="1.1">1.1&times;</option>
+            <option value="1.25">1.25&times;</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="instruction-box">
+        <h4>Questions 1 &ndash; 10</h4>
+        <p>Complete the table below.</p>
+        <span class="word-limit-tag">Write ONE WORD AND/OR A NUMBER for each answer.</span>
+      </div>
+
+      <!-- Part 1 Table -->
+      <table class="exam-table">
+        <thead>
+          <tr>
+            <th style="width: 20%;">Name of restaurant</th>
+            <th style="width: 25%;">Location</th>
+            <th style="width: 30%;">Reason for recommendation</th>
+            <th style="width: 25%;">Other comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1: The Junction -->
+          <tr>
+            <td><strong>The Junction</strong></td>
+            <td>Greyson Street, near the station</td>
+            <td>
+              Good for people who are especially keen on
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">1</span>
+                <input type="text" class="q-input" id="q1" data-qid="1" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(1)">
+                <span class="answer-key-hint" id="hint_q1">fish</span>
+              </span>
+            </td>
+            <td>
+              Quite expensive<br><br>
+              The
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">2</span>
+                <input type="text" class="q-input" id="q2" data-qid="2" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(2)">
+                <span class="answer-key-hint" id="hint_q2">roof</span>
+              </span>
+              is a good place for a drink
+            </td>
+          </tr>
+
+          <!-- Row 2: Paloma -->
+          <tr>
+            <td><strong>Paloma</strong></td>
+            <td>In Bow Street next to the cinema</td>
+            <td>
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">3</span>
+                <input type="text" class="q-input" id="q3" data-qid="3" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(3)">
+                <span class="answer-key-hint" id="hint_q3">Spanish</span>
+              </span>
+              food, good for sharing
+            </td>
+            <td>
+              Staff are very friendly<br><br>
+              Need to pay &pound;50 deposit<br><br>
+              A limited selection of
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">4</span>
+                <input type="text" class="q-input" id="q4" data-qid="4" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(4)">
+                <span class="answer-key-hint" id="hint_q4">vegetarian</span>
+              </span>
+              food on the menu
+            </td>
+          </tr>
+
+          <!-- Row 3: The Audley -->
+          <tr>
+            <td>
+              The
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">5</span>
+                <input type="text" class="q-input" id="q5" data-qid="5" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(5)">
+                <span class="answer-key-hint" id="hint_q5">Audley</span>
+              </span>
+            </td>
+            <td>
+              At the top of a
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">6</span>
+                <input type="text" class="q-input" id="q6" data-qid="6" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(6)">
+                <span class="answer-key-hint" id="hint_q6">hotel</span>
+              </span>
+            </td>
+            <td>
+              A famous chef<br><br>
+              All the
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">7</span>
+                <input type="text" class="q-input" id="q7" data-qid="7" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(7)">
+                <span class="answer-key-hint" id="hint_q7">reviews</span>
+              </span>
+              are very good<br><br>
+              Only uses
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">8</span>
+                <input type="text" class="q-input" id="q8" data-qid="8" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(8)">
+                <span class="answer-key-hint" id="hint_q8">local</span>
+              </span>
+              ingredients
+            </td>
+            <td>
+              Set lunch costs: &pound;
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">9</span>
+                <input type="text" class="q-input" id="q9" data-qid="9" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(9)" style="max-width: 90px;">
+                <span class="answer-key-hint" id="hint_q9">30 / thirty</span>
+              </span>
+              per person<br><br>
+              Portions probably of
+              <span class="q-blank-wrap">
+                <span class="q-num-badge">10</span>
+                <input type="text" class="q-input" id="q10" data-qid="10" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(10)">
+                <span class="answer-key-hint" id="hint_q10">average</span>
+              </span>
+              size
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PART 2 -->
+    <!-- ========================================== -->
+    <section class="section-card" id="part2">
+      <div class="part-banner">
+        <div>
+          <h2 class="part-title">Test 1 &ndash; Listening &ndash; Part 2</h2>
+          <p class="part-subtitle">Edelman Pottery Studio &bull; Questions 11&ndash;20</p>
+        </div>
+      </div>
+
+      <!-- Part 2 Audio Player -->
+      <div class="audio-player-card">
+        <div class="audio-info">
+          <h3>Part 2 Audio Track</h3>
+          <p>Official recording: Cambridge IELTS 20 Test 1 Part 2 (T1S2.mp3)</p>
+        </div>
+        <div class="audio-controls-wrap">
+          <audio id="audioPart2" controls preload="metadata">
+            <source src="IELTS 20 TEST 1/T1S2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <select class="speed-select" onchange="setAudioSpeed('audioPart2', this.value)">
+            <option value="1">1.0&times; Normal</option>
+            <option value="0.8">0.8&times;</option>
+            <option value="1.1">1.1&times;</option>
+            <option value="1.25">1.25&times;</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Instructions Q11-16 -->
+      <div class="instruction-box">
+        <h4>Questions 11 &ndash; 16</h4>
+        <p>Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.</p>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="mcq-block" id="block_q11">
+        <div class="mcq-stem">
+          <span class="q-num-badge">11</span>
+          <span>Heather says pottery differs from other art forms because</span>
+          <span class="answer-key-hint" id="hint_q11">Key: A</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q11" value="A" onchange="handleMcqChange(11)"><span class="option-letter">A.</span> it lasts longer in the ground.</label>
+          <label class="option-label"><input type="radio" name="q11" value="B" onchange="handleMcqChange(11)"><span class="option-letter">B.</span> it is practised by more people.</label>
+          <label class="option-label"><input type="radio" name="q11" value="C" onchange="handleMcqChange(11)"><span class="option-letter">C.</span> it can be repaired more easily.</label>
+        </div>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="mcq-block" id="block_q12">
+        <div class="mcq-stem">
+          <span class="q-num-badge">12</span>
+          <span>Archaeologists sometimes identify the use of ancient pottery from</span>
+          <span class="answer-key-hint" id="hint_q12">Key: B</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q12" value="A" onchange="handleMcqChange(12)"><span class="option-letter">A.</span> the clay it was made with.</label>
+          <label class="option-label"><input type="radio" name="q12" value="B" onchange="handleMcqChange(12)"><span class="option-letter">B.</span> the marks that are on it.</label>
+          <label class="option-label"><input type="radio" name="q12" value="C" onchange="handleMcqChange(12)"><span class="option-letter">C.</span> the basic shape of it.</label>
+        </div>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="mcq-block" id="block_q13">
+        <div class="mcq-stem">
+          <span class="q-num-badge">13</span>
+          <span>Some people join Heather's pottery class because they want to</span>
+          <span class="answer-key-hint" id="hint_q13">Key: C</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q13" value="A" onchange="handleMcqChange(13)"><span class="option-letter">A.</span> create an item that looks very old.</label>
+          <label class="option-label"><input type="radio" name="q13" value="B" onchange="handleMcqChange(13)"><span class="option-letter">B.</span> find something that they are good at.</label>
+          <label class="option-label"><input type="radio" name="q13" value="C" onchange="handleMcqChange(13)"><span class="option-letter">C.</span> make something that will outlive them.</label>
+        </div>
+      </div>
+
+      <!-- Question 14 -->
+      <div class="mcq-block" id="block_q14">
+        <div class="mcq-stem">
+          <span class="q-num-badge">14</span>
+          <span>What does Heather value most about being a potter?</span>
+          <span class="answer-key-hint" id="hint_q14">Key: A</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q14" value="A" onchange="handleMcqChange(14)"><span class="option-letter">A.</span> its calming effect</label>
+          <label class="option-label"><input type="radio" name="q14" value="B" onchange="handleMcqChange(14)"><span class="option-letter">B.</span> its messy nature</label>
+          <label class="option-label"><input type="radio" name="q14" value="C" onchange="handleMcqChange(14)"><span class="option-letter">C.</span> its physical benefits</label>
+        </div>
+      </div>
+
+      <!-- Question 15 -->
+      <div class="mcq-block" id="block_q15">
+        <div class="mcq-stem">
+          <span class="q-num-badge">15</span>
+          <span>Most of the visitors to Edelman Pottery</span>
+          <span class="answer-key-hint" id="hint_q15">Key: B</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q15" value="A" onchange="handleMcqChange(15)"><span class="option-letter">A.</span> bring friends to join courses.</label>
+          <label class="option-label"><input type="radio" name="q15" value="B" onchange="handleMcqChange(15)"><span class="option-letter">B.</span> have never made a pot before.</label>
+          <label class="option-label"><input type="radio" name="q15" value="C" onchange="handleMcqChange(15)"><span class="option-letter">C.</span> try to learn techniques too quickly.</label>
+        </div>
+      </div>
+
+      <!-- Question 16 -->
+      <div class="mcq-block" id="block_q16">
+        <div class="mcq-stem">
+          <span class="q-num-badge">16</span>
+          <span>Heather reminds her visitors that they should</span>
+          <span class="answer-key-hint" id="hint_q16">Key: C</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q16" value="A" onchange="handleMcqChange(16)"><span class="option-letter">A.</span> put on their aprons.</label>
+          <label class="option-label"><input type="radio" name="q16" value="B" onchange="handleMcqChange(16)"><span class="option-letter">B.</span> change their clothes.</label>
+          <label class="option-label"><input type="radio" name="q16" value="C" onchange="handleMcqChange(16)"><span class="option-letter">C.</span> take off their jewellery.</label>
+        </div>
+      </div>
+
+      <!-- Instructions Q17-18 -->
+      <div class="instruction-box" style="margin-top: 32px;">
+        <h4>Questions 17 and 18</h4>
+        <p>Choose <strong>TWO</strong> letters, <strong>A&ndash;E</strong>.</p>
+        <span class="word-limit-tag">Select exactly 2 options</span>
+      </div>
+
+      <div class="mcq-block" id="block_q17_18">
+        <div class="mcq-stem">
+          <span class="q-num-badge">17-18</span>
+          <span>Which TWO things does Heather explain about kilns?</span>
+          <span class="answer-key-hint" id="hint_q17_18">Keys: A, E</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="checkbox" name="q17_18" value="A" onchange="handleMultiSelect('q17_18', 17, 18, 2)"><span class="option-letter">A.</span> what their function is</label>
+          <label class="option-label"><input type="checkbox" name="q17_18" value="B" onchange="handleMultiSelect('q17_18', 17, 18, 2)"><span class="option-letter">B.</span> when they were invented</label>
+          <label class="option-label"><input type="checkbox" name="q17_18" value="C" onchange="handleMultiSelect('q17_18', 17, 18, 2)"><span class="option-letter">C.</span> ways of keeping them safe</label>
+          <label class="option-label"><input type="checkbox" name="q17_18" value="D" onchange="handleMultiSelect('q17_18', 17, 18, 2)"><span class="option-letter">D.</span> where to put one in your home</label>
+          <label class="option-label"><input type="checkbox" name="q17_18" value="E" onchange="handleMultiSelect('q17_18', 17, 18, 2)"><span class="option-letter">E.</span> what some people use instead of one</label>
+        </div>
+      </div>
+
+      <!-- Instructions Q19-20 -->
+      <div class="instruction-box" style="margin-top: 32px;">
+        <h4>Questions 19 and 20</h4>
+        <p>Choose <strong>TWO</strong> letters, <strong>A&ndash;E</strong>.</p>
+        <span class="word-limit-tag">Select exactly 2 options</span>
+      </div>
+
+      <div class="mcq-block" id="block_q19_20">
+        <div class="mcq-stem">
+          <span class="q-num-badge">19-20</span>
+          <span>Which TWO points does Heather make about a potter's tools?</span>
+          <span class="answer-key-hint" id="hint_q19_20">Keys: C, E</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="checkbox" name="q19_20" value="A" onchange="handleMultiSelect('q19_20', 19, 20, 2)"><span class="option-letter">A.</span> Some are hard to hold.</label>
+          <label class="option-label"><input type="checkbox" name="q19_20" value="B" onchange="handleMultiSelect('q19_20', 19, 20, 2)"><span class="option-letter">B.</span> Some are worth buying.</label>
+          <label class="option-label"><input type="checkbox" name="q19_20" value="C" onchange="handleMultiSelect('q19_20', 19, 20, 2)"><span class="option-letter">C.</span> Some are essential items.</label>
+          <label class="option-label"><input type="checkbox" name="q19_20" value="D" onchange="handleMultiSelect('q19_20', 19, 20, 2)"><span class="option-letter">D.</span> Some have memorable names.</label>
+          <label class="option-label"><input type="checkbox" name="q19_20" value="E" onchange="handleMultiSelect('q19_20', 19, 20, 2)"><span class="option-letter">E.</span> Some are available for use by participants.</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PART 3 -->
+    <!-- ========================================== -->
+    <section class="section-card" id="part3">
+      <div class="part-banner">
+        <div>
+          <h2 class="part-title">Test 1 &ndash; Listening &ndash; Part 3</h2>
+          <p class="part-subtitle">Loneliness and Mental Health &bull; Questions 21&ndash;30</p>
+        </div>
+      </div>
+
+      <!-- Part 3 Audio Player -->
+      <div class="audio-player-card">
+        <div class="audio-info">
+          <h3>Part 3 Audio Track</h3>
+          <p>Official recording: Cambridge IELTS 20 Test 1 Part 3 (T1S3.mp3)</p>
+        </div>
+        <div class="audio-controls-wrap">
+          <audio id="audioPart3" controls preload="metadata">
+            <source src="IELTS 20 TEST 1/T1S3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <select class="speed-select" onchange="setAudioSpeed('audioPart3', this.value)">
+            <option value="1">1.0&times; Normal</option>
+            <option value="0.8">0.8&times;</option>
+            <option value="1.1">1.1&times;</option>
+            <option value="1.25">1.25&times;</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Instructions Q21-22 -->
+      <div class="instruction-box">
+        <h4>Questions 21 and 22</h4>
+        <p>Choose <strong>TWO</strong> letters, <strong>A&ndash;E</strong>.</p>
+      </div>
+
+      <div class="mcq-block" id="block_q21_22">
+        <div class="mcq-stem">
+          <span class="q-num-badge">21-22</span>
+          <span>Which TWO things do the students both believe are responsible for the increase in loneliness?</span>
+          <span class="answer-key-hint" id="hint_q21_22">Keys: C, E</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="checkbox" name="q21_22" value="A" onchange="handleMultiSelect('q21_22', 21, 22, 2)"><span class="option-letter">A.</span> social media</label>
+          <label class="option-label"><input type="checkbox" name="q21_22" value="B" onchange="handleMultiSelect('q21_22', 21, 22, 2)"><span class="option-letter">B.</span> smaller nuclear families</label>
+          <label class="option-label"><input type="checkbox" name="q21_22" value="C" onchange="handleMultiSelect('q21_22', 21, 22, 2)"><span class="option-letter">C.</span> urban design</label>
+          <label class="option-label"><input type="checkbox" name="q21_22" value="D" onchange="handleMultiSelect('q21_22', 21, 22, 2)"><span class="option-letter">D.</span> longer lifespans</label>
+          <label class="option-label"><input type="checkbox" name="q21_22" value="E" onchange="handleMultiSelect('q21_22', 21, 22, 2)"><span class="option-letter">E.</span> a mobile workforce</label>
+        </div>
+      </div>
+
+      <!-- Instructions Q23-24 -->
+      <div class="instruction-box" style="margin-top: 32px;">
+        <h4>Questions 23 and 24</h4>
+        <p>Choose <strong>TWO</strong> letters, <strong>A&ndash;E</strong>.</p>
+      </div>
+
+      <div class="mcq-block" id="block_q23_24">
+        <div class="mcq-stem">
+          <span class="q-num-badge">23-24</span>
+          <span>Which TWO health risks associated with loneliness do the students agree are based on solid evidence?</span>
+          <span class="answer-key-hint" id="hint_q23_24">Keys: A, C</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="checkbox" name="q23_24" value="A" onchange="handleMultiSelect('q23_24', 23, 24, 2)"><span class="option-letter">A.</span> a weakened immune system</label>
+          <label class="option-label"><input type="checkbox" name="q23_24" value="B" onchange="handleMultiSelect('q23_24', 23, 24, 2)"><span class="option-letter">B.</span> dementia</label>
+          <label class="option-label"><input type="checkbox" name="q23_24" value="C" onchange="handleMultiSelect('q23_24', 23, 24, 2)"><span class="option-letter">C.</span> cancer</label>
+          <label class="option-label"><input type="checkbox" name="q23_24" value="D" onchange="handleMultiSelect('q23_24', 23, 24, 2)"><span class="option-letter">D.</span> obesity</label>
+          <label class="option-label"><input type="checkbox" name="q23_24" value="E" onchange="handleMultiSelect('q23_24', 23, 24, 2)"><span class="option-letter">E.</span> cardiovascular disease</label>
+        </div>
+      </div>
+
+      <!-- Instructions Q25-26 -->
+      <div class="instruction-box" style="margin-top: 32px;">
+        <h4>Questions 25 and 26</h4>
+        <p>Choose <strong>TWO</strong> letters, <strong>A&ndash;E</strong>.</p>
+      </div>
+
+      <div class="mcq-block" id="block_q25_26">
+        <div class="mcq-stem">
+          <span class="q-num-badge">25-26</span>
+          <span>Which TWO opinions do both the students express about the evolutionary theory of loneliness?</span>
+          <span class="answer-key-hint" id="hint_q25_26">Keys: A, B</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="checkbox" name="q25_26" value="A" onchange="handleMultiSelect('q25_26', 25, 26, 2)"><span class="option-letter">A.</span> It has little practical relevance.</label>
+          <label class="option-label"><input type="checkbox" name="q25_26" value="B" onchange="handleMultiSelect('q25_26', 25, 26, 2)"><span class="option-letter">B.</span> It needs further investigation.</label>
+          <label class="option-label"><input type="checkbox" name="q25_26" value="C" onchange="handleMultiSelect('q25_26', 25, 26, 2)"><span class="option-letter">C.</span> It is misleading.</label>
+          <label class="option-label"><input type="checkbox" name="q25_26" value="D" onchange="handleMultiSelect('q25_26', 25, 26, 2)"><span class="option-letter">D.</span> It should be more widely accepted.</label>
+          <label class="option-label"><input type="checkbox" name="q25_26" value="E" onchange="handleMultiSelect('q25_26', 25, 26, 2)"><span class="option-letter">E.</span> It is difficult to understand.</label>
+        </div>
+      </div>
+
+      <!-- Instructions Q27-30 -->
+      <div class="instruction-box" style="margin-top: 32px;">
+        <h4>Questions 27 &ndash; 30</h4>
+        <p>Choose the correct letter, <strong>A</strong>, <strong>B</strong> or <strong>C</strong>.</p>
+        <p style="margin-top: 4px; font-weight: bold; color: #002b49;">Loneliness and mental health</p>
+      </div>
+
+      <!-- Question 27 -->
+      <div class="mcq-block" id="block_q27">
+        <div class="mcq-stem">
+          <span class="q-num-badge">27</span>
+          <span>When comparing loneliness to depression, the students</span>
+          <span class="answer-key-hint" id="hint_q27">Key: A</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q27" value="A" onchange="handleMcqChange(27)"><span class="option-letter">A.</span> doubt that there will ever be a medical cure for loneliness.</label>
+          <label class="option-label"><input type="radio" name="q27" value="B" onchange="handleMcqChange(27)"><span class="option-letter">B.</span> claim that the link between loneliness and mental health is overstated.</label>
+          <label class="option-label"><input type="radio" name="q27" value="C" onchange="handleMcqChange(27)"><span class="option-letter">C.</span> express frustration that loneliness is not taken more seriously.</label>
+        </div>
+      </div>
+
+      <!-- Question 28 -->
+      <div class="mcq-block" id="block_q28">
+        <div class="mcq-stem">
+          <span class="q-num-badge">28</span>
+          <span>Why do the students decide to start their presentation with an example from their own experience?</span>
+          <span class="answer-key-hint" id="hint_q28">Key: B</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q28" value="A" onchange="handleMcqChange(28)"><span class="option-letter">A.</span> to explain how difficult loneliness can be</label>
+          <label class="option-label"><input type="radio" name="q28" value="B" onchange="handleMcqChange(28)"><span class="option-letter">B.</span> to highlight a situation that most students will recognise</label>
+          <label class="option-label"><input type="radio" name="q28" value="C" onchange="handleMcqChange(28)"><span class="option-letter">C.</span> to emphasise that feeling lonely is more common for men than women</label>
+        </div>
+      </div>
+
+      <!-- Question 29 -->
+      <div class="mcq-block" id="block_q29">
+        <div class="mcq-stem">
+          <span class="q-num-badge">29</span>
+          <span>The students agree that talking to strangers is a good strategy for dealing with loneliness because</span>
+          <span class="answer-key-hint" id="hint_q29">Key: A</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q29" value="A" onchange="handleMcqChange(29)"><span class="option-letter">A.</span> it creates a sense of belonging.</label>
+          <label class="option-label"><input type="radio" name="q29" value="B" onchange="handleMcqChange(29)"><span class="option-letter">B.</span> it builds self-confidence.</label>
+          <label class="option-label"><input type="radio" name="q29" value="C" onchange="handleMcqChange(29)"><span class="option-letter">C.</span> it makes people feel more positive.</label>
+        </div>
+      </div>
+
+      <!-- Question 30 -->
+      <div class="mcq-block" id="block_q30">
+        <div class="mcq-stem">
+          <span class="q-num-badge">30</span>
+          <span>The students find it difficult to understand why solitude is considered to be</span>
+          <span class="answer-key-hint" id="hint_q30">Key: C</span>
+        </div>
+        <div class="options-group">
+          <label class="option-label"><input type="radio" name="q30" value="A" onchange="handleMcqChange(30)"><span class="option-letter">A.</span> similar to loneliness.</label>
+          <label class="option-label"><input type="radio" name="q30" value="B" onchange="handleMcqChange(30)"><span class="option-letter">B.</span> necessary for mental health.</label>
+          <label class="option-label"><input type="radio" name="q30" value="C" onchange="handleMcqChange(30)"><span class="option-letter">C.</span> an enjoyable experience.</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PART 4 -->
+    <!-- ========================================== -->
+    <section class="section-card" id="part4">
+      <div class="part-banner">
+        <div>
+          <h2 class="part-title">Test 1 &ndash; Listening &ndash; Part 4</h2>
+          <p class="part-subtitle">Reclaiming Urban Rivers &bull; Questions 31&ndash;40</p>
+        </div>
+      </div>
+
+      <!-- Part 4 Audio Player -->
+      <div class="audio-player-card">
+        <div class="audio-info">
+          <h3>Part 4 Audio Track</h3>
+          <p>Official recording: Cambridge IELTS 20 Test 1 Part 4 (T1S4.mp3)</p>
+        </div>
+        <div class="audio-controls-wrap">
+          <audio id="audioPart4" controls preload="metadata">
+            <source src="IELTS 20 TEST 1/T1S4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <select class="speed-select" onchange="setAudioSpeed('audioPart4', this.value)">
+            <option value="1">1.0&times; Normal</option>
+            <option value="0.8">0.8&times;</option>
+            <option value="1.1">1.1&times;</option>
+            <option value="1.25">1.25&times;</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="instruction-box">
+        <h4>Questions 31 &ndash; 40</h4>
+        <p>Complete the notes below.</p>
+        <span class="word-limit-tag">Write ONE WORD ONLY for each answer.</span>
+      </div>
+
+      <!-- Lecture Notes Sheet -->
+      <div class="lecture-notes-sheet">
+        <div class="lecture-title">Reclaiming urban rivers</div>
+
+        <div class="lecture-subheading">Historical background</div>
+        <ul class="lecture-list">
+          <li>Nearly all major cities were built on a river.</li>
+          <li>Rivers were traditionally used by city dwellers for transport, fishing and recreation.</li>
+          <li>Industrial development and rising populations later led to:
+            <ul class="lecture-sublist">
+              <li>more sewage from houses being discharged into the river</li>
+              <li>
+                pollution from
+                <span class="q-blank-wrap">
+                  <span class="q-num-badge">31</span>
+                  <input type="text" class="q-input" id="q31" data-qid="31" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(31)">
+                  <span class="answer-key-hint" id="hint_q31">factories</span>
+                </span>
+                on the river bank.
+              </li>
+            </ul>
+          </li>
+          <li>
+            In 1957, the River Thames in London was declared biologically
+            <span class="q-blank-wrap">
+              <span class="q-num-badge">32</span>
+              <input type="text" class="q-input" id="q32" data-qid="32" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(32)">
+              <span class="answer-key-hint" id="hint_q32">dead</span>
+            </span>
+          </li>
+        </ul>
+
+        <div class="lecture-subheading">Recent improvements</div>
+        <ul class="lecture-list">
+          <li>
+            Seals and even a
+            <span class="q-blank-wrap">
+              <span class="q-num-badge">33</span>
+              <input type="text" class="q-input" id="q33" data-qid="33" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(33)">
+              <span class="answer-key-hint" id="hint_q33">whale</span>
+            </span>
+            have been seen in the River Thames.
+          </li>
+          <li>
+            Riverside warehouses are converted to restaurants and
+            <span class="q-blank-wrap">
+              <span class="q-num-badge">34</span>
+              <input type="text" class="q-input" id="q34" data-qid="34" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(34)">
+              <span class="answer-key-hint" id="hint_q34">apartments</span>
+            </span>
+          </li>
+          <li>In Los Angeles, there are plans to:
+            <ul class="lecture-sublist">
+              <li>
+                build a riverside
+                <span class="q-blank-wrap">
+                  <span class="q-num-badge">35</span>
+                  <input type="text" class="q-input" id="q35" data-qid="35" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(35)">
+                  <span class="answer-key-hint" id="hint_q35">park</span>
+                </span>
+              </li>
+              <li>
+                display 36
+                <span class="q-blank-wrap">
+                  <span class="q-num-badge">36</span>
+                  <input type="text" class="q-input" id="q36" data-qid="36" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(36)">
+                  <span class="answer-key-hint" id="hint_q36">art</span>
+                </span>
+                projects.
+              </li>
+            </ul>
+          </li>
+          <li>
+            In Paris,
+            <span class="q-blank-wrap">
+              <span class="q-num-badge">37</span>
+              <input type="text" class="q-input" id="q37" data-qid="37" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(37)">
+              <span class="answer-key-hint" id="hint_q37">beaches</span>
+            </span>
+            are created on the sides of the river every summer.
+          </li>
+        </ul>
+
+        <div class="lecture-subheading">Transport possibilities</div>
+        <ul class="lecture-list">
+          <li>
+            Over 2 billion passengers already travel by
+            <span class="q-blank-wrap">
+              <span class="q-num-badge">38</span>
+              <input type="text" class="q-input" id="q38" data-qid="38" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(38)">
+              <span class="answer-key-hint" id="hint_q38">ferry</span>
+            </span>
+            in cities round the world.
+          </li>
+          <li>Changes in shopping habits mean the number of deliveries that are made is increasing.</li>
+          <li>
+            Instead of road transport, goods could be transported by large freight barges and electric
+            <span class="q-blank-wrap">
+              <span class="q-num-badge">39</span>
+              <input type="text" class="q-input" id="q39" data-qid="39" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(39)">
+              <span class="answer-key-hint" id="hint_q39">bikes</span>
+            </span>
+            or, in future, by
+            <span class="q-blank-wrap">
+              <span class="q-num-badge">40</span>
+              <input type="text" class="q-input" id="q40" data-qid="40" placeholder="Answer..." autocomplete="off" oninput="handleInputChange(40)">
+              <span class="answer-key-hint" id="hint_q40">drone</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Bottom Submit Button Banner -->
+    <div style="text-align: center; margin: 40px 0;">
+      <button class="btn-submit-main" onclick="submitExam()" style="font-size: 20px; padding: 14px 40px;">
+        &#x2714; Complete &amp; Submit Exam (Generate Word Report)
+      </button>
+      <p style="margin-top: 8px; font-style: italic; color: #666; font-size: 14px;">
+        You can submit at any time during the test to receive your grading report and diagnostic analysis.
+      </p>
+    </div>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- QUESTION NAVIGATOR MODAL -->
+  <!-- ========================================== -->
+  <div class="grid-overlay" id="gridModal">
+    <div class="grid-modal">
+      <div class="grid-modal-header">
+        <h3>Question Navigator (1 &ndash; 40)</h3>
+        <button class="close-btn" onclick="closeGridModal()">&times;</button>
+      </div>
+      <div class="q-grid" id="qGridContainer"></div>
+      <div class="grid-legend">
+        <div class="legend-item"><div class="legend-box" style="background:#f0f4f8;"></div> Not Answered</div>
+        <div class="legend-item"><div class="legend-box" style="background:#e8f5e9; border-color:#2e7d32;"></div> Answered</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- GRADING RESULTS & DIAGNOSTIC MODAL -->
+  <!-- ========================================== -->
+  <div class="result-overlay" id="resultModal">
+    <div class="result-card">
+      <div class="result-header">
+        <h2>Official IELTS Diagnostic Grading Report</h2>
+        <p style="font-style: italic; color: #555;">Cambridge IELTS 20 Academic &bull; Listening Test 1</p>
+      </div>
+
+      <!-- Scorecard Banner -->
+      <div class="score-banner">
+        <div class="score-circle">
+          <div class="score-num" id="rawScoreDisplay">0 / 40</div>
+          <div class="score-desc">Raw Score</div>
+        </div>
+        <div class="band-badge">
+          <div class="band-val" id="bandScoreDisplay">0.0</div>
+          <div class="band-lbl">Estimated Band</div>
+        </div>
+        <div class="score-circle">
+          <div class="score-num" id="percentScoreDisplay">0%</div>
+          <div class="score-desc">Accuracy</div>
+        </div>
+      </div>
+
+      <!-- Section Breakdown Bars -->
+      <div class="section-bars-grid">
+        <div class="section-bar-item">
+          <div class="section-bar-title"><span>Part 1 (Social Table)</span><span id="p1ScoreText">0/10</span></div>
+          <div class="progress-track"><div class="progress-fill" id="p1ProgressBar" style="width: 0%;"></div></div>
+        </div>
+        <div class="section-bar-item">
+          <div class="section-bar-title"><span>Part 2 (Pottery Monologue)</span><span id="p2ScoreText">0/10</span></div>
+          <div class="progress-track"><div class="progress-fill" id="p2ProgressBar" style="width: 0%;"></div></div>
+        </div>
+        <div class="section-bar-item">
+          <div class="section-bar-title"><span>Part 3 (Academic Discussion)</span><span id="p3ScoreText">0/10</span></div>
+          <div class="progress-track"><div class="progress-fill" id="p3ProgressBar" style="width: 0%;"></div></div>
+        </div>
+        <div class="section-bar-item">
+          <div class="section-bar-title"><span>Part 4 (Lecture Notes)</span><span id="p4ScoreText">0/10</span></div>
+          <div class="progress-track"><div class="progress-fill" id="p4ProgressBar" style="width: 0%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-button-group">
+        <button class="btn-download-word" onclick="downloadWordReport()">
+          &#x1F4BE; Download Word Report (.doc / .docx)
+        </button>
+        <button class="btn-review-paper" onclick="toggleReviewInPaper()">
+          &#x1F4D6; Review On Exam Sheet
+        </button>
+        <button class="btn-close-modal" onclick="closeResultModal()">
+          Close Summary
+        </button>
+      </div>
+
+      <!-- Diagnostic Tabs -->
+      <div class="diagnostic-tabs">
+        <button class="diag-tab-btn active" onclick="switchDiagTab('tab-synthesis')">Performance Analysis</button>
+        <button class="diag-tab-btn" onclick="switchDiagTab('tab-items')">Question-by-Question Breakdown</button>
+      </div>
+
+      <!-- Tab 1: Synthesis -->
+      <div class="diag-pane active" id="tab-synthesis">
+        <div class="feedback-box">
+          <h4>&#x2705; Diagnostic Strengths</h4>
+          <ul id="diagStrengthsList">
+            <li>Reviewing performance...</li>
+          </ul>
+        </div>
+        <div class="feedback-box">
+          <h4>&#x26A0; Diagnostic Weaknesses</h4>
+          <ul id="diagWeaknessesList">
+            <li>Reviewing performance...</li>
+          </ul>
+        </div>
+        <div class="feedback-box">
+          <h4>&#x1F3AF; Bases for Improvement &amp; Targeted Strategy</h4>
+          <ul id="diagImprovementsList">
+            <li>Reviewing performance...</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tab 2: Item Analysis Table -->
+      <div class="diag-pane" id="tab-items">
+        <div class="item-table-wrap">
+          <table class="item-analysis-table">
+            <thead>
+              <tr>
+                <th style="width: 8%;">Q#</th>
+                <th style="width: 25%;">Question Focus / Skill</th>
+                <th style="width: 20%;">Your Answer</th>
+                <th style="width: 20%;">Correct Key</th>
+                <th style="width: 12%;">Status</th>
+                <th style="width: 15%;">Part</th>
+              </tr>
+            </thead>
+            <tbody id="itemAnalysisTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC & WORD GENERATION ENGINE  -->
+  <!-- ========================================== -->
+  <script>
+    /* Official Answer Key Definitions & Question Specifications */
+    const ANSWER_KEYS = {
+      1: { type: "text", accepted: ["fish"], part: 1, focus: "Specific cuisine preference noun", skill: "Detail listening for culinary noun" },
+      2: { type: "text", accepted: ["roof"], part: 1, focus: "Location feature noun", skill: "Identifying venue architectural feature" },
+      3: { type: "text", accepted: ["spanish"], part: 1, focus: "Nationality / cuisine adjective", skill: "Recognizing cuisine descriptor & capitalization" },
+      4: { type: "text", accepted: ["vegetarian"], part: 1, focus: "Dietary restriction descriptor", skill: "Spelling high-frequency dietary terms" },
+      5: { type: "text", accepted: ["audley"], part: 1, focus: "Proper noun restaurant name", skill: "Phonetic listening & proper noun orthography" },
+      6: { type: "text", accepted: ["hotel"], part: 1, focus: "Building / location noun", skill: "Identifying venue location category" },
+      7: { type: "text", accepted: ["reviews", "review"], part: 1, focus: "Plural noun assessment", skill: "Distinguishing plural endings (-s)" },
+      8: { type: "text", accepted: ["local"], part: 1, focus: "Ingredient quality adjective", skill: "Listening for adjective collocations" },
+      9: { type: "text", accepted: ["30", "thirty"], part: 1, focus: "Price & numerical figure", skill: "Discerning price from distractors" },
+      10: { type: "text", accepted: ["average"], part: 1, focus: "Portion size descriptor", skill: "Identifying quantity & proportion adjectives" },
+
+      11: { type: "mcq", accepted: ["A"], part: 2, focus: "Pottery longevity vs other art", skill: "Distinguishing primary distinction from secondary traits" },
+      12: { type: "mcq", accepted: ["B"], part: 2, focus: "Archaeological deduction from marks", skill: "Identifying evidence of pottery usage" },
+      13: { type: "mcq", accepted: ["C"], part: 2, focus: "Motivation: creating lasting legacy", skill: "Synonym matching for 'outlive' / permanence" },
+      14: { type: "mcq", accepted: ["A"], part: 2, focus: "Speaker's value: calming effect", skill: "Prioritizing emotional value over physical challenges" },
+      15: { type: "mcq", accepted: ["B"], part: 2, focus: "Visitor profile: beginners", skill: "Identifying audience background characteristics" },
+      16: { type: "mcq", accepted: ["C"], part: 2, focus: "Safety reminder: jewellery removal", skill: "Tracking explicit workshop rules and cautions" },
+
+      // Questions 17-18: Pick 2 from A-E: A, E
+      17: { type: "multi", set: "q17_18", accepted: ["A", "E"], part: 2, focus: "Kiln explanations: function & alternatives", skill: "Multi-select key factual points" },
+      18: { type: "multi", set: "q17_18", accepted: ["A", "E"], part: 2, focus: "Kiln explanations: function & alternatives", skill: "Multi-select key factual points" },
+
+      // Questions 19-20: Pick 2 from A-E: C, E
+      19: { type: "multi", set: "q19_20", accepted: ["C", "E"], part: 2, focus: "Potter's tools: essential & available items", skill: "Evaluating tool attributes in dialogue" },
+      20: { type: "multi", set: "q19_20", accepted: ["C", "E"], part: 2, focus: "Potter's tools: essential & available items", skill: "Evaluating tool attributes in dialogue" },
+
+      // Questions 21-22: Pick 2 from A-E: C, E
+      21: { type: "multi", set: "q21_22", accepted: ["C", "E"], part: 3, focus: "Loneliness causes: urban design & mobile workforce", skill: "Identifying mutual consensus between speakers" },
+      22: { type: "multi", set: "q21_22", accepted: ["C", "E"], part: 3, focus: "Loneliness causes: urban design & mobile workforce", skill: "Identifying mutual consensus between speakers" },
+
+      // Questions 23-24: Pick 2 from A-E: A, C
+      23: { type: "multi", set: "q23_24", accepted: ["A", "C"], part: 3, focus: "Solid evidence health risks: immune system & cancer", skill: "Separating proven clinical claims from assumptions" },
+      24: { type: "multi", set: "q23_24", accepted: ["A", "C"], part: 3, focus: "Solid evidence health risks: immune system & cancer", skill: "Separating proven clinical claims from assumptions" },
+
+      // Questions 25-26: Pick 2 from A-E: A, B
+      25: { type: "multi", set: "q25_26", accepted: ["A", "B"], part: 3, focus: "Evolutionary theory: little practical relevance & needs investigation", skill: "Evaluating critical academic stance on theories" },
+      26: { type: "multi", set: "q25_26", accepted: ["A", "B"], part: 3, focus: "Evolutionary theory: little practical relevance & needs investigation", skill: "Evaluating critical academic stance on theories" },
+
+      27: { type: "mcq", accepted: ["A"], part: 3, focus: "Doubt medical cure for loneliness", skill: "Understanding nuances comparing loneliness and depression" },
+      28: { type: "mcq", accepted: ["B"], part: 3, focus: "Starting presentation: recognizable situation", skill: "Analyzing presentation structure and pedagogical intent" },
+      29: { type: "mcq", accepted: ["A"], part: 3, focus: "Talking to strangers: sense of belonging", skill: "Connecting social intervention to psychological outcome" },
+      30: { type: "mcq", accepted: ["C"], part: 3, focus: "Solitude as enjoyable experience", skill: "Distinguishing voluntary solitude from lonely isolation" },
+
+      31: { type: "text", accepted: ["factories", "factory"], part: 4, focus: "Pollution source noun", skill: "Lecture note-taking: industrial sources of contamination" },
+      32: { type: "text", accepted: ["dead"], part: 4, focus: "Biological state adjective", skill: "Ecological status terminology ('biologically dead')" },
+      33: { type: "text", accepted: ["whale"], part: 4, focus: "Marine mammal indicator noun", skill: "Listening for surprising wildlife evidence" },
+      34: { type: "text", accepted: ["apartments", "apartment"], part: 4, focus: "Urban residential conversion noun", skill: "Recognizing architectural reuse terminology" },
+      35: { type: "text", accepted: ["park"], part: 4, focus: "Urban green infrastructure noun", skill: "Catching civic development project noun" },
+      36: { type: "text", accepted: ["art"], part: 4, focus: "Project qualifier noun", skill: "Identifying creative initiative descriptor" },
+      37: { type: "text", accepted: ["beaches", "beach"], part: 4, focus: "Seasonal riverside creation noun", skill: "Catching plural seasonal recreational features" },
+      38: { type: "text", accepted: ["ferry", "ferries"], part: 4, focus: "Waterborne passenger transport noun", skill: "Transit modal noun classification" },
+      39: { type: "text", accepted: ["bikes", "bike", "bicycles"], part: 4, focus: "Clean freight delivery vehicle", skill: "Colloquial term identification in logistics" },
+      40: { type: "text", accepted: ["drone", "drones"], part: 4, focus: "Emerging autonomous delivery technology", skill: "Predicting future technological transport terms" }
+    };
+
+    /* Timer Implementation */
+    let timeLeft = 30 * 60; // 30 minutes
+    let timerRunning = true;
+    let timerInterval = null;
+
+    function initTimer() {
+      timerInterval = setInterval(() => {
+        if (!timerRunning) return;
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert("Time is up! Submitting your IELTS Listening Test...");
+          submitExam();
+          return;
+        }
+        timeLeft--;
+        updateTimerDisplay();
+      }, 1000);
+    }
+
+    function updateTimerDisplay() {
+      const mins = Math.floor(timeLeft / 60);
+      const secs = timeLeft % 60;
+      document.getElementById("timerDisplay").innerText = 
+        `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function toggleTimer() {
+      timerRunning = !timerRunning;
+      const btn = document.getElementById("timerToggleBtn");
+      btn.innerText = timerRunning ? "Pause" : "Resume";
+      btn.style.color = timerRunning ? "#ffeb3b" : "#ff9800";
+    }
+
+    function setAudioSpeed(audioId, speed) {
+      const audio = document.getElementById(audioId);
+      if (audio) {
+        audio.playbackRate = parseFloat(speed);
+      }
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        const yOffset = -70; 
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      const activeIdx = { part1: 0, part2: 1, part3: 2, part4: 3 }[id];
+      if (document.querySelectorAll('.tab-btn')[activeIdx]) {
+        document.querySelectorAll('.tab-btn')[activeIdx].classList.add('active');
+      }
+    }
+
+    /* Input & Progress Tracking */
+    function handleInputChange(qid) {
+      const input = document.getElementById(`q${qid}`);
+      if (input.value.trim() !== "") {
+        input.classList.add("answered");
+      } else {
+        input.classList.remove("answered");
+      }
+      updateProgressCount();
+    }
+
+    function handleMcqChange(qid) {
+      const selected = document.querySelector(`input[name="q${qid}"]:checked`);
+      const block = document.getElementById(`block_q${qid}`);
+      if (selected && block) {
+        block.style.borderColor = "#2e7d32";
+        block.style.background = "#fcfdfc";
+      }
+      updateProgressCount();
+    }
+
+    function handleMultiSelect(groupName, qStart, qEnd, maxAllowed) {
+      const checkedBoxes = Array.from(document.querySelectorAll(`input[name="${groupName}"]:checked`));
+      if (checkedBoxes.length > maxAllowed) {
+        alert(`You can select a maximum of ${maxAllowed} options for this question set.`);
+        checkedBoxes[checkedBoxes.length - 1].checked = false;
+        return;
+      }
+      const block = document.getElementById(`block_${groupName}`);
+      if (checkedBoxes.length > 0 && block) {
+        block.style.borderColor = "#2e7d32";
+        block.style.background = "#fcfdfc";
+      } else if (block) {
+        block.style.borderColor = "#e2e8f0";
+        block.style.background = "#ffffff";
+      }
+      updateProgressCount();
+    }
+
+    function getCandidateAnswer(qid) {
+      const meta = ANSWER_KEYS[qid];
+      if (meta.type === "text") {
+        const el = document.getElementById(`q${qid}`);
+        return el ? el.value.trim() : "";
+      } else if (meta.type === "mcq") {
+        const el = document.querySelector(`input[name="q${qid}"]:checked`);
+        return el ? el.value : "";
+      } else if (meta.type === "multi") {
+        const checked = Array.from(document.querySelectorAll(`input[name="${meta.set}"]:checked`)).map(cb => cb.value);
+        return checked;
+      }
+      return "";
+    }
+
+    function isQuestionAnswered(qid) {
+      const ans = getCandidateAnswer(qid);
+      if (Array.isArray(ans)) {
+        const meta = ANSWER_KEYS[qid];
+        if (qid === 17 || qid === 21 || qid === 23 || qid === 25 || qid === 19) {
+          return ans.length >= 1;
+        } else {
+          return ans.length >= 2;
+        }
+      }
+      return ans !== "";
+    }
+
+    function updateProgressCount() {
+      let answered = 0;
+      for (let i = 1; i <= 40; i++) {
+        if (isQuestionAnswered(i)) answered++;
+      }
+      document.getElementById("progressCount").innerText = `${answered} / 40`;
+      renderQGrid();
+    }
+
+    /* Question Grid Navigator */
+    function renderQGrid() {
+      const container = document.getElementById("qGridContainer");
+      if (!container) return;
+      container.innerHTML = "";
+      for (let i = 1; i <= 40; i++) {
+        const btn = document.createElement("button");
+        btn.className = "q-grid-btn";
+        btn.innerText = i;
+        if (isQuestionAnswered(i)) {
+          btn.classList.add("answered");
+        }
+        btn.onclick = () => {
+          closeGridModal();
+          jumpToQuestion(i);
+        };
+        container.appendChild(btn);
+      }
+    }
+
+    function openGridModal() {
+      renderQGrid();
+      document.getElementById("gridModal").style.display = "flex";
+    }
+
+    function closeGridModal() {
+      document.getElementById("gridModal").style.display = "none";
+    }
+
+    function jumpToQuestion(qid) {
+      let target = document.getElementById(`q${qid}`) || document.getElementById(`block_q${qid}`);
+      if (!target) {
+        if (qid === 17 || qid === 18) target = document.getElementById(`block_q17_18`);
+        if (qid === 19 || qid === 20) target = document.getElementById(`block_q19_20`);
+        if (qid === 21 || qid === 22) target = document.getElementById(`block_q21_22`);
+        if (qid === 23 || qid === 24) target = document.getElementById(`block_q23_24`);
+        if (qid === 25 || qid === 26) target = document.getElementById(`block_q25_26`);
+      }
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (target.focus && target.tagName === 'INPUT') target.focus();
+      }
+    }
+
+    /* Band Score Conversion Table (IELTS Academic Listening) */
+    function calculateBandScore(rawScore) {
+      if (rawScore >= 39) return "9.0";
+      if (rawScore >= 37) return "8.5";
+      if (rawScore >= 35) return "8.0";
+      if (rawScore >= 32) return "7.5";
+      if (rawScore >= 30) return "7.0";
+      if (rawScore >= 26) return "6.5";
+      if (rawScore >= 23) return "6.0";
+      if (rawScore >= 18) return "5.5";
+      if (rawScore >= 16) return "5.0";
+      if (rawScore >= 13) return "4.5";
+      if (rawScore >= 10) return "4.0";
+      if (rawScore >= 7) return "3.5";
+      if (rawScore >= 5) return "3.0";
+      if (rawScore >= 3) return "2.5";
+      return "2.0";
+    }
+
+    /* Submission & Evaluation State Cache */
+    let evaluationReportData = null;
+
+    function evaluateExam() {
+      let rawScore = 0;
+      let partScores = { 1: 0, 2: 0, 3: 0, 4: 0 };
+      let itemResults = [];
+
+      // Multi-select pairs evaluation helper
+      const multiPairs = [
+        { q1: 17, q2: 18, set: "q17_18", keys: ["A", "E"] },
+        { q1: 19, q2: 20, set: "q19_20", keys: ["C", "E"] },
+        { q1: 21, q2: 22, set: "q21_22", keys: ["C", "E"] },
+        { q1: 23, q2: 24, set: "q23_24", keys: ["A", "C"] },
+        { q1: 25, q2: 26, set: "q25_26", keys: ["A", "B"] }
+      ];
+
+      let multiHandled = {};
+
+      for (let i = 1; i <= 40; i++) {
+        const meta = ANSWER_KEYS[i];
+        let isCorrect = false;
+        let userAnsStr = "";
+        let correctKeyStr = "";
+
+        if (meta.type === "text") {
+          const rawInput = getCandidateAnswer(i);
+          userAnsStr = rawInput;
+          const cleanInput = rawInput.toLowerCase().trim();
+          correctKeyStr = meta.accepted.join(" / ");
+          isCorrect = meta.accepted.some(acc => cleanInput === acc.toLowerCase());
+          if (isCorrect) {
+            rawScore++;
+            partScores[meta.part]++;
+          }
+        } else if (meta.type === "mcq") {
+          const userChoice = getCandidateAnswer(i);
+          userAnsStr = userChoice || "[Unanswered]";
+          correctKeyStr = meta.accepted[0];
+          isCorrect = (userChoice === meta.accepted[0]);
+          if (isCorrect) {
+            rawScore++;
+            partScores[meta.part]++;
+          }
+        } else if (meta.type === "multi") {
+          const pair = multiPairs.find(p => p.q1 === i || p.q2 === i);
+          const checked = getCandidateAnswer(i); // array
+          userAnsStr = checked.join(", ") || "[Unanswered]";
+          correctKeyStr = pair.keys.join(", ");
+
+          if (!multiHandled[pair.set]) {
+            // First time processing this pair:
+            // Calculate how many of the checked match the keys
+            let matched = 0;
+            checked.forEach(ch => {
+              if (pair.keys.includes(ch)) matched++;
+            });
+            multiHandled[pair.set] = { matched: matched, totalUser: checked.length };
+          }
+
+          // Allocate scores to q1 and q2
+          if (i === pair.q1) {
+            isCorrect = multiHandled[pair.set].matched >= 1;
+          } else if (i === pair.q2) {
+            isCorrect = multiHandled[pair.set].matched >= 2;
+          }
+
+          if (isCorrect) {
+            rawScore++;
+            partScores[meta.part]++;
+          }
+        }
+
+        itemResults.push({
+          qNum: i,
+          part: meta.part,
+          focus: meta.focus,
+          skill: meta.skill,
+          userAnswer: userAnsStr || "[Unanswered]",
+          correctKey: correctKeyStr,
+          isCorrect: isCorrect
+        });
+      }
+
+      const bandScore = calculateBandScore(rawScore);
+      const percentage = Math.round((rawScore / 40) * 100);
+
+      // Strengths, Weaknesses, and Bases for Improvement Synthesis
+      const strengths = [];
+      const weaknesses = [];
+      const improvements = [];
+
+      if (partScores[1] >= 8) {
+        strengths.push("High proficiency in everyday transactional listening (Part 1 Table Completion), demonstrating strong grasp of factual information, dates, numbers, and basic spelling.");
+      } else {
+        weaknesses.push(`Part 1 Social Needs deficit (${partScores[1]}/10): Vulnerability to fast numerical details, phonetic names (Audley), or dietary adjectives (vegetarian, Spanish).`);
+        improvements.push("Part 1 Focus: Drill daily phonetic spelling for names, addresses, and price numbers. Practice double-checking plural endings (reviews) and initial capital letters for national cuisines (Spanish).");
+      }
+
+      if (partScores[2] >= 7) {
+        strengths.push("Solid comprehension of informative monologues and multi-select equipment/feature descriptions in cultural and recreational settings (Part 2).");
+      } else {
+        weaknesses.push(`Part 2 Monologue comprehension weakness (${partScores[2]}/10): Challenged by speaker attitude shifts and distractor traps in multi-select questions (kilns & tools).`);
+        improvements.push("Part 2 Focus: Train to actively anticipate distractors. When speakers introduce multiple features, note negation phrases ('contrary to popular belief', 'while some think...') before selecting answers.");
+      }
+
+      if (partScores[3] >= 7) {
+        strengths.push("Excellent competence in following rapid academic discussions, distinguishing nuanced speaker consensus, and evaluating psychological arguments (Part 3).");
+      } else {
+        weaknesses.push(`Part 3 Academic Discussion difficulty (${partScores[3]}/10): Loss of comprehension when tracking mutual agreement between multiple interlocutors on conceptual topics.`);
+        improvements.push("Part 3 Focus: Focus on discursive agreement markers ('I wouldn't dispute that', 'That's exactly my point', 'You've hit the nail on the head') to verify true mutual consensus rather than unilateral proposals.");
+      }
+
+      if (partScores[4] >= 7) {
+        strengths.push("Strong academic lecture note-taking ability (Part 4), maintaining pacing through extended monologues on environmental reclamation.");
+      } else {
+        weaknesses.push(`Part 4 Academic Lecture note-taking gaps (${partScores[4]}/10): Missed key technical nouns (factories, whale, apartments, drone) or biological adjectives (dead).`);
+        improvements.push("Part 4 Focus: Pre-read note headings (Historical background, Recent improvements, Transport possibilities) during the 60-second preparation time. Predict grammatical part of speech (noun/adjective/plural) for each blank.");
+      }
+
+      // Add general holistic guidance
+      if (rawScore >= 35) {
+        strengths.push("Candidate demonstrates Band 8.0+ mastery, capable of operating comfortably in native-speaker academic environments.");
+        improvements.push("Maintain performance by focusing on absolute zero-tolerance spelling accuracy and speed in unpredictable multi-choice options.");
+      } else if (rawScore >= 25) {
+        improvements.push("Target next band threshold by systematically analyzing missed items: categorize errors into 'phonetic miss', 'spelling slip', or 'lexical distractor trap'.");
+      } else {
+        improvements.push("Foundational improvement: Practice active shadow-listening with official IELTS audio transcripts to sync ear-to-text recognition speed.");
+      }
+
+      return {
+        rawScore,
+        bandScore,
+        percentage,
+        partScores,
+        itemResults,
+        strengths,
+        weaknesses,
+        improvements,
+        completedAt: new Date().toLocaleString()
+      };
+    }
+
+    function submitExam() {
+      evaluationReportData = evaluateExam();
+
+      // Update UI modal numbers
+      document.getElementById("rawScoreDisplay").innerText = `${evaluationReportData.rawScore} / 40`;
+      document.getElementById("bandScoreDisplay").innerText = `Band ${evaluationReportData.bandScore}`;
+      document.getElementById("percentScoreDisplay").innerText = `${evaluationReportData.percentage}%`;
+
+      // Section bars
+      const p1 = evaluationReportData.partScores[1];
+      const p2 = evaluationReportData.partScores[2];
+      const p3 = evaluationReportData.partScores[3];
+      const p4 = evaluationReportData.partScores[4];
+
+      document.getElementById("p1ScoreText").innerText = `${p1}/10 (${p1*10}%)`;
+      document.getElementById("p1ProgressBar").style.width = `${p1*10}%`;
+
+      document.getElementById("p2ScoreText").innerText = `${p2}/10 (${p2*10}%)`;
+      document.getElementById("p2ProgressBar").style.width = `${p2*10}%`;
+
+      document.getElementById("p3ScoreText").innerText = `${p3}/10 (${p3*10}%)`;
+      document.getElementById("p3ProgressBar").style.width = `${p3*10}%`;
+
+      document.getElementById("p4ScoreText").innerText = `${p4}/10 (${p4*10}%)`;
+      document.getElementById("p4ProgressBar").style.width = `${p4*10}%`;
+
+      // Strengths & Weaknesses
+      const strList = document.getElementById("diagStrengthsList");
+      strList.innerHTML = evaluationReportData.strengths.map(s => `<li>${s}</li>`).join("");
+
+      const wList = document.getElementById("diagWeaknessesList");
+      wList.innerHTML = evaluationReportData.weaknesses.map(w => `<li>${w}</li>`).join("");
+
+      const impList = document.getElementById("diagImprovementsList");
+      impList.innerHTML = evaluationReportData.improvements.map(i => `<li>${i}</li>`).join("");
+
+      // Render Item Table
+      const itemTbody = document.getElementById("itemAnalysisTableBody");
+      itemTbody.innerHTML = evaluationReportData.itemResults.map(item => `
+        <tr>
+          <td><strong>Q${item.qNum}</strong></td>
+          <td>${item.focus}</td>
+          <td><code>${escapeHtml(item.userAnswer)}</code></td>
+          <td><strong>${item.correctKey}</strong></td>
+          <td>
+            <span class="${item.isCorrect ? 'status-correct' : 'status-incorrect'}">
+              ${item.isCorrect ? '&#x2714; Correct' : '&#x2718; Incorrect'}
+            </span>
+          </td>
+          <td>Part ${item.part}</td>
+        </tr>
+      `).join("");
+
+      // Show result modal
+      document.getElementById("resultModal").style.display = "flex";
+
+      // Automatically trigger Word document download as required
+      downloadWordReport();
+    }
+
+    function closeResultModal() {
+      document.getElementById("resultModal").style.display = "none";
+    }
+
+    function switchDiagTab(tabId) {
+      document.querySelectorAll('.diag-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.diag-pane').forEach(p => p.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function toggleReviewInPaper() {
+      closeResultModal();
+      document.body.classList.add("paper-review-mode");
+
+      if (!evaluationReportData) return;
+
+      evaluationReportData.itemResults.forEach(item => {
+        const input = document.getElementById(`q${item.qNum}`);
+        if (input) {
+          if (item.isCorrect) {
+            input.classList.remove("user-incorrect");
+            input.classList.add("user-correct");
+          } else {
+            input.classList.remove("user-correct");
+            input.classList.add("user-incorrect");
+          }
+        }
+      });
+
+      alert("Review Mode Activated: Correct answers are highlighted in Green; Incorrect/Missed answers are in Red with correct keys revealed next to each input!");
+      scrollToSection("part1");
+    }
+
+    function escapeHtml(str) {
+      if (!str) return "";
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    /* =========================================================================
+       AUTOMATED DOWNLOADABLE WORD DOCUMENT (.DOC / .DOCX COMPATIBLE) GENERATOR
+       Creates a rich Microsoft Word Document adhering to Times New Roman,
+       Academic Typography, Tables, and Section-by-Section Diagnostic Analysis.
+       ========================================================================= */
+    function downloadWordReport() {
+      if (!evaluationReportData) {
+        evaluationReportData = evaluateExam();
+      }
+
+      const d = evaluationReportData;
+      const testDate = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+      // Generate items table HTML for Word
+      let itemsTableRows = "";
+      d.itemResults.forEach(item => {
+        const statusColor = item.isCorrect ? "#1b5e20" : "#b71c1c";
+        const statusText = item.isCorrect ? "CORRECT" : "INCORRECT";
+        itemsTableRows += `
+          <tr style="border-bottom: 1px solid #d0d0d0;">
+            <td style="padding: 6px 8px; font-weight: bold; text-align: center;">Q${item.qNum}</td>
+            <td style="padding: 6px 8px;">Part ${item.part}</td>
+            <td style="padding: 6px 8px;">${item.focus}</td>
+            <td style="padding: 6px 8px; font-style: italic;">${item.skill}</td>
+            <td style="padding: 6px 8px; font-family: 'Courier New', monospace;">${escapeHtml(item.userAnswer)}</td>
+            <td style="padding: 6px 8px; font-weight: bold;">${item.correctKey}</td>
+            <td style="padding: 6px 8px; font-weight: bold; color: ${statusColor};">${statusText}</td>
+          </tr>
+        `;
+      });
+
+      const strengthsHtml = d.strengths.map(s => `<li style="margin-bottom: 6px;">${s}</li>`).join("");
+      const weaknessesHtml = d.weaknesses.map(w => `<li style="margin-bottom: 6px;">${w}</li>`).join("");
+      const improvementsHtml = d.improvements.map(i => `<li style="margin-bottom: 6px;">${i}</li>`).join("");
+
+      const wordDocHtml = `
+<html xmlns:o='urn:schemas-microsoft-com:office:office' 
+      xmlns:w='urn:schemas-microsoft-com:office:word' 
+      xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+  <meta charset="utf-8">
+  <title>IELTS 20 Test 1 Listening Diagnostic Grading Report</title>
+  <!--[if gte mso 9]>
+  <xml>
+    <w:WordDocument>
+      <w:View>Print</w:View>
+      <w:Zoom>100</w:Zoom>
+      <w:DoNotOptimizeForBrowser/>
+    </w:WordDocument>
+  </xml>
+  <![endif]-->
+  <style>
+    @page Section1 {
+      size: 595.3pt 841.9pt; /* A4 */
+      margin: 54.0pt 54.0pt 54.0pt 54.0pt;
+      mso-header-margin: 36.0pt;
+      mso-footer-margin: 36.0pt;
+      mso-paper-source: 0;
+    }
+    div.Section1 { page: Section1; }
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 11pt;
+      color: #111111;
+      line-height: 1.4;
+    }
+    h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20pt;
+      font-weight: bold;
+      color: #002b49;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 4pt;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 14pt;
+      font-weight: bold;
+      color: #002b49;
+      border-bottom: 1.5pt solid #002b49;
+      padding-bottom: 3pt;
+      margin-top: 16pt;
+      margin-bottom: 8pt;
+    }
+    h3 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 12pt;
+      font-weight: bold;
+      color: #333333;
+      margin-top: 10pt;
+      margin-bottom: 4pt;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 6pt;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8pt;
+      margin-bottom: 14pt;
+      font-size: 10pt;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    th {
+      background-color: #002b49;
+      color: #ffffff;
+      padding: 6pt;
+      font-weight: bold;
+      text-align: left;
+      border: 1pt solid #002b49;
+    }
+    td {
+      padding: 5pt 6pt;
+      border: 1pt solid #cccccc;
+      vertical-align: top;
+    }
+    .scorecard-table td {
+      border: 1pt solid #002b49;
+      text-align: center;
+      padding: 10pt 8pt;
+      background: #f8fafc;
+    }
+    .callout-box {
+      border: 1.5pt solid #b8860b;
+      background-color: #fdfbf7;
+      padding: 10pt 14pt;
+      margin: 10pt 0;
+    }
+  </style>
+</head>
+<body>
+<div class="Section1">
+
+  <!-- Header -->
+  <p style="text-align: center; font-size: 10pt; color: #555555; text-transform: uppercase; letter-spacing: 1pt;">
+    Cambridge Assessment English &bull; IELTS 20 Academic Practice Test 1
+  </p>
+  <h1>Diagnostic Grading &amp; Performance Evaluation Report</h1>
+  <p style="text-align: center; font-style: italic; color: #444444; margin-bottom: 16pt;">
+    Official Listening Module &bull; Comprehensive Item-by-Item Diagnostic Assessment &bull; Generated: ${testDate}
+  </p>
+
+  <!-- Executive Scorecard -->
+  <h2>1. Executive Summary &amp; Band Score Attainment</h2>
+  <table class="scorecard-table" style="margin-bottom: 12pt;">
+    <tr>
+      <td style="width: 25%;">
+        <span style="font-size: 9pt; text-transform: uppercase; color: #555;">Total Raw Score</span><br>
+        <strong style="font-size: 22pt; color: #002b49;">${d.rawScore} / 40</strong>
+      </td>
+      <td style="width: 25%;">
+        <span style="font-size: 9pt; text-transform: uppercase; color: #555;">Accuracy Rate</span><br>
+        <strong style="font-size: 22pt; color: #002b49;">${d.percentage}%</strong>
+      </td>
+      <td style="width: 25%;">
+        <span style="font-size: 9pt; text-transform: uppercase; color: #555;">IELTS Band Score</span><br>
+        <strong style="font-size: 24pt; color: #8b0000;">Band ${d.bandScore}</strong>
+      </td>
+      <td style="width: 25%;">
+        <span style="font-size: 9pt; text-transform: uppercase; color: #555;">CEFR Benchmark</span><br>
+        <strong style="font-size: 18pt; color: #002b49;">${d.rawScore >= 35 ? 'C2 Mastery' : d.rawScore >= 30 ? 'C1 Effective' : d.rawScore >= 23 ? 'B2 Vantage' : 'B1 Threshold'}</strong>
+      </td>
+    </tr>
+  </table>
+
+  <!-- Section-by-Section Matrix -->
+  <h2>2. Section-by-Section Competency Matrix</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Test Section</th>
+        <th style="width: 35%;">Content Topic &amp; Genre</th>
+        <th style="width: 20%;">Score (Raw / %)</th>
+        <th style="width: 20%;">Evaluation Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Part 1 (Q1&ndash;10)</strong></td>
+        <td>Social Needs: Restaurant Recommendations (Table Completion)</td>
+        <td><strong>${d.partScores[1]} / 10</strong> (${d.partScores[1]*10}%)</td>
+        <td>${d.partScores[1] >= 8 ? 'Strong' : d.partScores[1] >= 6 ? 'Competent' : 'Needs Reinforcement'}</td>
+      </tr>
+      <tr>
+        <td><strong>Part 2 (Q11&ndash;20)</strong></td>
+        <td>Social Context: Edelman Pottery Monologue (MCQ &amp; Multi-select)</td>
+        <td><strong>${d.partScores[2]} / 10</strong> (${d.partScores[2]*10}%)</td>
+        <td>${d.partScores[2] >= 8 ? 'Strong' : d.partScores[2] >= 6 ? 'Competent' : 'Needs Reinforcement'}</td>
+      </tr>
+      <tr>
+        <td><strong>Part 3 (Q21&ndash;30)</strong></td>
+        <td>Academic Discussion: Loneliness &amp; Mental Health (Seminar Debate)</td>
+        <td><strong>${d.partScores[3]} / 10</strong> (${d.partScores[3]*10}%)</td>
+        <td>${d.partScores[3] >= 8 ? 'Strong' : d.partScores[3] >= 6 ? 'Competent' : 'Needs Reinforcement'}</td>
+      </tr>
+      <tr>
+        <td><strong>Part 4 (Q31&ndash;40)</strong></td>
+        <td>Academic Lecture: Reclaiming Urban Rivers (Lecture Notes)</td>
+        <td><strong>${d.partScores[4]} / 10</strong> (${d.partScores[4]*10}%)</td>
+        <td>${d.partScores[4] >= 8 ? 'Strong' : d.partScores[4] >= 6 ? 'Competent' : 'Needs Reinforcement'}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Diagnostic Synthesis -->
+  <h2>3. Qualitative Diagnostic Synthesis</h2>
+  <div class="callout-box">
+    <h3 style="color: #1b5e20; margin-top: 0;">&bull; Key Strengths Demonstrated</h3>
+    <ul>
+      ${strengthsHtml}
+    </ul>
+    <h3 style="color: #b71c1c;">&bull; Critical Weaknesses &amp; Error Trends</h3>
+    <ul>
+      ${weaknessesHtml}
+    </ul>
+    <h3 style="color: #002b49;">&bull; Bases for Improvement &amp; Targeted Action Plan</h3>
+    <ul>
+      ${improvementsHtml}
+    </ul>
+  </div>
+
+  <!-- Complete 40-item Breakdown Table -->
+  <h2>4. Detailed Question-by-Question Item Diagnostic Analysis</h2>
+  <p style="font-size: 10pt; color: #555;">
+    The table below evaluates every question (1 through 40), comparing candidate submissions against official Cambridge IELTS keys, accompanied by skill taxonomy and error analysis.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 6%; text-align: center;">Q#</th>
+        <th style="width: 8%;">Part</th>
+        <th style="width: 25%;">Target Information Focus</th>
+        <th style="width: 23%;">Underlying Skill &amp; Trap Factor</th>
+        <th style="width: 15%;">Your Input</th>
+        <th style="width: 13%;">Official Key</th>
+        <th style="width: 10%;">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${itemsTableRows}
+    </tbody>
+  </table>
+
+  <!-- Band Descriptor Reference -->
+  <h2>5. Cambridge IELTS Listening Band Scale &amp; Next Milestone Strategy</h2>
+  <p>
+    <strong>Band 9.0 (39-40):</strong> Expert user with full operational command. Understanding with complete fluency and precise orthography.<br>
+    <strong>Band 8.0 - 8.5 (35-38):</strong> Very good user; occasional unsystematic inaccuracies. Handles complex detailed argumentation.<br>
+    <strong>Band 7.0 - 7.5 (30-34):</strong> Good user; operational command with occasional misunderstandings in demanding fast lectures.<br>
+    <strong>Band 6.0 - 6.5 (23-29):</strong> Competent user; generally effective command despite some inaccuracies, particularly in Parts 3 &amp; 4.<br>
+    <strong>Band 5.0 - 5.5 (16-22):</strong> Modest user; partial command with frequent errors in multi-selection and rapid academic discourse.
+  </p>
+
+  <p style="text-align: center; margin-top: 30pt; font-size: 9pt; color: #777; border-top: 1pt solid #ccc; padding-top: 8pt;">
+    &copy; Cambridge University Press &amp; Assessment Practice Material &bull; IELTS 20 Academic &bull; Report Generated Automatically
+  </p>
+
+</div>
+</body>
+</html>
+      `;
+
+      // Trigger instant download via Blob
+      const blob = new Blob(['\ufeff' + wordDocHtml], { type: 'application/msword' });
+      const downloadUrl = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = downloadUrl;
+      a.download = `IELTS_20_Test_1_Listening_Grading_Report_${d.bandScore.replace('.', '_')}.doc`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(downloadUrl);
+    }
+
+    // Initialize timer on page load
+    window.onload = function() {
+      initTimer();
+      renderQGrid();
+    };
+  </script>
+</body>
+</html>
